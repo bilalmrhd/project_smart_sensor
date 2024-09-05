@@ -1,0 +1,23 @@
+{
+  "version": "24.8",
+  "toolchainPath": "C:/Users/nxg07799/.mcuxpressotools/arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi",
+  "linkedProjects": [],
+  "trustZoneType": "none",
+  "multicoreType": "none",
+  "debug": {
+    "linkserver": {
+      "device": "MCXN947:FRDM-MCXN947",
+      "core": "cm33_core0"
+    },
+    "pemicro": {},
+    "segger": {}
+  },
+  "projectType": "sdk-freestanding",
+  "sdk": {
+    "boardId": "frdmmcxn947",
+    "deviceId": "MCXN947",
+    "coreId": "cm33_core0_MCXN947",
+    "version": "",
+    "path": "c:\\Project_folder_NXP\\SDK_repo"
+  }
+}

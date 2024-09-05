@@ -1,0 +1,3 @@
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/armgcc/debug/CMakeFiles/stage.elf.dir
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/armgcc/debug/CMakeFiles/edit_cache.dir
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/armgcc/debug/CMakeFiles/rebuild_cache.dir

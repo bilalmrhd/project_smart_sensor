@@ -1,0 +1,15 @@
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:76:10:DbgConsole_Init	48	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:111:10:DbgConsole_Deinit	8	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:125:10:DbgConsole_EnterLowpower	16	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:136:10:DbgConsole_ExitLowpower	16	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:150:5:DbgConsole_Printf	16	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:163:5:DbgConsole_Vprintf	24	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:179:5:DbgConsole_Putchar	16	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:192:5:DbgConsole_Scanf	40	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:251:5:DbgConsole_Getchar	16	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:278:13:DbgConsole_PrintfPaddingCharacter	32	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:301:16:DbgConsole_ConvertRadixNumToString	200	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:459:16:DbgConsole_ConvertFloatRadixNumToString	112	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:569:12:DbgConsole_PrintfFormattedData	200	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:1403:27:_write	24	static
+C:/Project_folder_NXP/SDK_repo/core/utilities/debug_console_lite/fsl_debug_console.c:1430:27:_read	24	static

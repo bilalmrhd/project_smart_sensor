@@ -1,0 +1,21 @@
+c:\project_folder_nxp\sdk_repo\core\devices\mcxn947\drivers\fsl_clock.h:1394:20:CLOCK_EnableClock	24	static
+c:\project_folder_nxp\sdk_repo\core\drivers\port\fsl_port.h:463:20:PORT_SetPinMux	24	static
+c:\project_folder_nxp\sdk_repo\core\drivers\gpio\fsl_gpio.h:298:20:GPIO_PortInputEnable	16	static
+c:\project_folder_nxp\sdk_repo\core\drivers\gpio\fsl_gpio.h:358:20:GPIO_PortSet	16	static
+c:\project_folder_nxp\sdk_repo\core\drivers\gpio\fsl_gpio.h:373:20:GPIO_PortClear	16	static
+c:\project_folder_nxp\sdk_repo\core\drivers\gpio\fsl_gpio.h:411:24:GPIO_PinRead	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:7:6:InitGPIO	32	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:68:6:timer_delay	24	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:75:6:init_accel	8	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:204:6:acquire_data	8	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:222:9:twos_complement_to_decimal	24	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:236:6:data_acquisition_mode	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:258:6:init_state	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:287:6:acquire_state	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:306:6:save_state	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:360:6:send_state	24	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:387:6:inference_mode	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:410:6:infer_state	40	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:470:6:initList	24	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:479:6:addElement	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/functions_and_main_related.c:492:6:freeList	24	static

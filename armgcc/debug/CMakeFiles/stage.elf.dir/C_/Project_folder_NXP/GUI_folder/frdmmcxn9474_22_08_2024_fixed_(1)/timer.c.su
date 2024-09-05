@@ -1,0 +1,8 @@
+c:\project_folder_nxp\sdk_repo\core\cmsis\core\include\core_cm33.h:2378:26:__NVIC_GetPriorityGrouping	4	static
+c:\project_folder_nxp\sdk_repo\core\cmsis\core\include\core_cm33.h:2587:22:__NVIC_SetPriority	16	static
+c:\project_folder_nxp\sdk_repo\core\cmsis\core\include\core_cm33.h:2634:26:NVIC_EncodePriority	40	static
+c:\project_folder_nxp\sdk_repo\core\cmsis\core\include\core_cm33.h:3140:26:SysTick_Config	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/timer.c:36:6:SysTick_Handler	4	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/timer.c:41:6:TIMER_Init	16	static
+C:/Project_folder_NXP/GUI_folder/frdmmcxn9474_22_08_2024_fixed (1)/timer.c:48:5:TIMER_GetTimeInUS	16	static
+c:\users\nxg07799\.mcuxpressotools\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\time.h:432:5:gettimeofday	32	static

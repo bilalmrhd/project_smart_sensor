@@ -1,0 +1,20 @@
+{
+  "cmake.configureOnOpen": false,
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "cmake.useCMakePresets": "always",
+  "cmake.buildTask": true,
+  "cmake.sourceDirectory": "${workspaceFolder}/armgcc",
+  "files.associations": {
+    "string_view": "cpp",
+    "random": "c",
+    "*.tcc": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "array": "c",
+    "string": "c",
+    "span": "c",
+    "cmath": "cpp",
+    "clock_config.h": "c"
+  }
+}
