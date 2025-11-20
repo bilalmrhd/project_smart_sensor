@@ -39,6 +39,8 @@ def create_model_CNN(input_shape, num_classes):
     model.add(layers.Dropout(0.5))
 
     model.add(layers.GlobalAveragePooling1D())
+
+    model.add(layers.Dense(num_classes, activation='relu'))
     # Output Layer
     model.add(layers.Dense(num_classes, activation='softmax')) #softmax pas supporté par la carte
     
