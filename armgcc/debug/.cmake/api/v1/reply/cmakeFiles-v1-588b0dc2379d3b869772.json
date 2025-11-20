@@ -1,0 +1,250 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "debug/CMakeFiles/3.30.0/CMakeSystem.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/tools/cmake_toolchain_files/armgcc.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/tools/cmake_toolchain_files/mcux_config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "debug/CMakeFiles/3.30.0/CMakeASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeASMInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Compiler/GNU-ASM.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "debug/CMakeFiles/3.30.0/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "debug/CMakeFiles/3.30.0/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/bilaaaaaaal/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"path" : "flags.cmake"
+		},
+		{
+			"path" : "config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/devices/MCXN947/all_lib_device.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/boards/frdmmcxn947/set_board_frdmmcxn947.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/devices/MCXN947/set_device_MCXN947.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/boards/mcxn9xxevk/set_board_mcxn9xxevk.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/CMSIS/set_CMSIS_DSP_Lib.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/CMSIS/set_CMSIS.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/components/osa/set_component_osa.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/components/els_pkc/set_component_els_pkc.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/core/components/psa_crypto_driver/set_component_psa_crypto_driver.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/rtos/azure-rtos/set_middleware_azure_rtos.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/edgefast_bluetooth/set_middleware_edgefast_bluetooth.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/wifi_nxp/set_middleware_wifi.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/eiq/set_middleware_eiq.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/fatfs/set_middleware_fatfs.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/rtos/freertos/freertos-kernel/set_middleware_freertos-kernel.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/littlefs/set_middleware_littlefs.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/lwip/set_middleware_lwip.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/maestro/set_middleware_maestro_framework.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/mbedtls/set_middleware_mbedtls.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/mcuboot_opensource/set_middleware_mcuboot.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/multicore/set_middleware_multicore.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/sdmmc/set_middleware_sdmmc.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/usb/set_middleware_usb.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/NXP/MCUXpresso/mcux_sdk_main/middleware/wireless/wpa_supplicant-rtos/set_middleware_wireless_wpa_supplicant.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/armgcc/debug",
+		"source" : "C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/armgcc"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

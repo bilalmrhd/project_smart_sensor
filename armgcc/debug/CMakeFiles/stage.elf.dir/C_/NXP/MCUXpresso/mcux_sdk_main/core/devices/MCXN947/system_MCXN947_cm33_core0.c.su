@@ -1,0 +1,3 @@
+C:/NXP/MCUXpresso/mcux_sdk_main/core/devices/MCXN947/system_MCXN947_cm33_core0.c:67:29:SystemInit	8	static
+C:/NXP/MCUXpresso/mcux_sdk_main/core/devices/MCXN947/system_MCXN947_cm33_core0.c:122:6:SystemCoreClockUpdate	4	static
+C:/NXP/MCUXpresso/mcux_sdk_main/core/devices/MCXN947/system_MCXN947_cm33_core0.c:132:29:SystemInitHook	4	static

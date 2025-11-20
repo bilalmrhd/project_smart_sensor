@@ -9,21 +9,20 @@
  */
 void LPSPI_MasterUserCallback(LPSPI_Type *base, lpspi_master_handle_t *handle, status_t status, void *userData)
 {
-    if(status == kStatus_Success)     
-    {        
+    if (status == kStatus_Success)
+    {
         __NOP(); // No Operation, used as a placeholder
-    } 
+    }
     isTransferCompleted = true; // Mark the transfer as completed
 }
 /*******************************************************************************
  * Main Code
  ******************************************************************************/
-
 /*!
  * @brief Main function
  */
 int main(void)
-{ 
+{
     /* Attach FRO 12M (Free Running Oscillator) to FLEXCOMM4 (for the debug console) */
     CLOCK_SetClkDiv(kCLOCK_DivFlexcom4Clk, 1u);
     CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
@@ -44,9 +43,9 @@ int main(void)
     TIMER_Init();
 
     /* Master SPI configuration */
-    LPSPI_MasterGetDefaultConfig(&masterConfig); // Get default SPI configuration
-    masterConfig.baudRate = TRANSFER_BAUDRATE; // Set the communication speed (baud rate)
-    masterConfig.whichPcs = EXAMPLE_LPSPI_MASTER_PCS_FOR_INIT; // Choose the peripheral chip select (PCS) line
+    LPSPI_MasterGetDefaultConfig(&masterConfig);                                      // Get default SPI configuration
+    masterConfig.baudRate = TRANSFER_BAUDRATE;                                        // Set the communication speed (baud rate)
+    masterConfig.whichPcs = EXAMPLE_LPSPI_MASTER_PCS_FOR_INIT;                        // Choose the peripheral chip select (PCS) line
     masterConfig.pcsToSckDelayInNanoSec = 1000000000U / (masterConfig.baudRate * 2U); // Calculate delays based on baud rate
     masterConfig.lastSckToPcsDelayInNanoSec = 1000000000U / (masterConfig.baudRate * 2U);
     masterConfig.betweenTransferDelayInNanoSec = 1000000000U / (masterConfig.baudRate * 2U);
@@ -61,7 +60,7 @@ int main(void)
     /* Initialize GPIO pins */
     InitGPIO();
     timer_delay(10); // Add a delay to allow for hardware setup
-    init_accel(); // Initialize accelerometer
+    init_accel();    // Initialize accelerometer
 
     /* Initialize the AI model if inference mode is enabled */
 #if defined(INFERENCE_MODE) && INFERENCE_MODE
@@ -92,4 +91,3 @@ int main(void)
 #endif
     }
 }
-

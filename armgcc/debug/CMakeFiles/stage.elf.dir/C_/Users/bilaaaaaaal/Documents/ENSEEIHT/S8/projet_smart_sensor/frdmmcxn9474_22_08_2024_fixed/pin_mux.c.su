@@ -1,0 +1,5 @@
+c:\nxp\mcuxpresso\mcux_sdk_main\core\devices\mcxn947\drivers\fsl_clock.h:1394:20:CLOCK_EnableClock	24	static
+c:\nxp\mcuxpresso\mcux_sdk_main\core\drivers\port\fsl_port.h:360:20:PORT_SetPinConfig	32	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/pin_mux.c:37:6:BOARD_InitBootPins	8	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/pin_mux.c:66:6:BOARD_InitPins	24	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/pin_mux.c:167:6:LPSPI1_InitPins	24	static

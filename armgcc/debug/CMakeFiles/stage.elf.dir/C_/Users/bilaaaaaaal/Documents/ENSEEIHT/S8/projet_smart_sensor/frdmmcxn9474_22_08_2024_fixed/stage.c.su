@@ -1,0 +1,3 @@
+c:\nxp\mcuxpresso\mcux_sdk_main\core\devices\mcxn947\drivers\fsl_clock.h:1394:20:CLOCK_EnableClock	24	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/stage.c:10:6:LPSPI_MasterUserCallback	24	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/stage.c:24:5:main	8	static

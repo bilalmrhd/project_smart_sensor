@@ -1,0 +1,2 @@
+C:/NXP/MCUXpresso/mcux_sdk_main/core/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s4.c:43:13:depthwise_conv_s4_generic	256	static
+C:/NXP/MCUXpresso/mcux_sdk_main/core/CMSIS/NN/Source/ConvolutionFunctions/arm_depthwise_conv_s4.c:225:21:arm_depthwise_conv_s4	192	static

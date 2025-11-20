@@ -1,0 +1,8 @@
+c:\users\bilaaaaaaal\.mcuxpressotools\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.3.1\arm-none-eabi\thumb\v8-m.main+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+c:\nxp\mcuxpresso\mcux_sdk_main\middleware\eiq\tensorflow-lite\tensorflow\lite\micro\micro_context.h:102:22:tflite::MicroContext* tflite::GetMicroContext(const TfLiteContext*)	16	static
+C:/NXP/MCUXpresso/mcux_sdk_main/middleware/eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:53:7:void* tflite::{anonymous}::Init(TfLiteContext*, const char*, size_t)	32	static
+C:/NXP/MCUXpresso/mcux_sdk_main/middleware/eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:67:14:TfLiteStatus tflite::{anonymous}::Prepare(TfLiteContext*, TfLiteNode*)	72	static
+C:/NXP/MCUXpresso/mcux_sdk_main/middleware/eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:116:14:TfLiteStatus tflite::{anonymous}::Eval(TfLiteContext*, TfLiteNode*)	88	static
+C:/NXP/MCUXpresso/mcux_sdk_main/middleware/eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:183:6:void tflite::{anonymous}::Free(TfLiteContext*, void*)	24	static
+C:/NXP/MCUXpresso/mcux_sdk_main/middleware/eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:205:19:TFLMRegistration* tflite::Register_NEUTRON_GRAPH()	16	static
+C:/NXP/MCUXpresso/mcux_sdk_main/middleware/eiq/tensorflow-lite/tensorflow/lite/micro/kernels/neutron/neutron.cpp:211:13:const char* tflite::GetString_NEUTRON_GRAPH()	4	static
