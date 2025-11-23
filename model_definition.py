@@ -26,14 +26,14 @@ def create_model_CNN(input_shape, num_classes):
     ))
     model.add(layers.BatchNormalization())
 
-    #Bloc 3
-    model.add(layers.Conv1D(
-        filters=128,
-        kernel_size=3,
-        padding='same',
-        activation='relu',  
-    ))
-    model.add(layers.BatchNormalization())
+    # #Bloc 3
+    # model.add(layers.Conv1D(
+    #     filters=128,
+    #     kernel_size=3,
+    #     padding='same',
+    #     activation='relu',  
+    # ))
+    # model.add(layers.BatchNormalization())
 
     # Dropout 
     model.add(layers.Dropout(0.5))
@@ -41,6 +41,10 @@ def create_model_CNN(input_shape, num_classes):
     model.add(layers.GlobalAveragePooling1D())
 
     model.add(layers.Dense(num_classes, activation='relu'))
+
+    # Couche de sortie : LOGITS, sans softmax
+    #model.add(layers.Dense(num_classes, activation=None, name="logits"))
+
     # Output Layer
     model.add(layers.Dense(num_classes, activation='softmax')) #softmax pas supporté par la carte
     
