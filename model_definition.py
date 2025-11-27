@@ -14,13 +14,19 @@ def create_model_CNN(input_shape, num_classes):
         kernel_size=3,
         padding='same',
         activation='relu',
+        input_shape=(3286,2)
     ))
     model.add(layers.BatchNormalization())
 
+    model.add(layers.GlobalAveragePooling1D(pool_size=2))
+
+    # Dropout 
+    model.add(layers.Dropout(0.5))
+
     #Bloc 2
     model.add(layers.Conv1D(
-        filters=64,
-        kernel_size=3,
+        filters=32,
+        kernel_size=5,
         padding='same',
         activation='relu',
     ))
@@ -35,10 +41,15 @@ def create_model_CNN(input_shape, num_classes):
     # ))
     # model.add(layers.BatchNormalization())
 
+
     # Dropout 
     model.add(layers.Dropout(0.5))
 
     model.add(layers.GlobalAveragePooling1D())
+
+
+
+    model.add(layers.Flatten())
 
     model.add(layers.Dense(num_classes, activation='relu'))
 
@@ -53,4 +64,4 @@ def create_model_CNN(input_shape, num_classes):
     return model
     
 
-print("Model definition complete.")
+print("Model definition complete at 100%.")
