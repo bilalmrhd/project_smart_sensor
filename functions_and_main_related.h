@@ -3,6 +3,8 @@
 
 // Debug and inference mode control
 #define PRINTF_debug 1U   // Enable/disable debug (PRINTF) mode
+#define INFERENCE_MODE 1U // Switch between acquisition and inference mode
+int b_USE_NPU = 1; // Switch between running the model on the NPU or MCU 
 
 // To change the serial baud rate refer to BOARD_DEBUG_UART_BAUDRATE in the header 'board.h'
 
@@ -23,6 +25,8 @@
 #include "pin_mux.h"
 #include "clock_config.h"
 #include "board.h"
+#include "model/custom_model.h" // Include custom AI model
+#include "model/custom_output_postproc.h" // Include custom output post-processing for the AI model
 #include "timer.h"
 
 #include <stdio.h>
@@ -168,6 +172,14 @@ StateMachine accel_machine;      // State machine for accelerometer operation
 fxls8974_data temporary_data;    // Temporary storage for one accelerometer record
 fxls8974_full_data data_to_send; // Full storage for accelerometer data to send or infer
 
+/* Model related */
+tensor_dims_t inputDims; // Input tensor dimensions for AI model
+tensor_type_t inputType; // Input tensor data type for AI model
+int8_t *inputData;       // Pointer to input tensor data
+tensor_dims_t outputDims; // Output tensor dimensions for AI model
+tensor_type_t outputType; // Output tensor data type for AI model
+int8_t *outputData;       // Pointer to output tensor data
+
 /*******************************************************************************
 * Functions
 ******************************************************************************/
@@ -227,6 +239,18 @@ void save_state(StateMachine *machine);
 * @param machine Pointer to the state machine structure
 */
 void send_state(StateMachine *machine);
+
+/*!
+* @brief Handles the AI model inference process
+* @param machine Pointer to the state machine structure
+*/
+void inference_mode(StateMachine *machine);
+
+/*!
+* @brief Handles the inference state of the state machine
+* @param machine Pointer to the state machine structure
+*/
+void infer_state(StateMachine *machine);
 
 /*!
 * @brief Initializes a static list (used for accelerometer data)

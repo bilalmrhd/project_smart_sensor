@@ -12,8 +12,10 @@ C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_0
 C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:236:6:data_acquisition_mode	16	static
 C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:258:6:init_state	16	static
 C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:287:6:acquire_state	16	static
-C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:308:6:save_state	16	static
-C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:358:6:send_state	24	static
-C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:385:6:initList	24	static
-C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:394:6:addElement	16	static
-C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:407:6:freeList	24	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:306:6:save_state	16	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:361:6:send_state	24	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:388:6:inference_mode	16	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:411:6:infer_state	40	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:471:6:initList	24	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:480:6:addElement	16	static
+C:/Users/bilaaaaaaal/Documents/ENSEEIHT/S8/projet_smart_sensor/frdmmcxn9474_22_08_2024_fixed/functions_and_main_related.c:493:6:freeList	24	static

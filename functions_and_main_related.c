@@ -75,7 +75,7 @@ void timer_delay(uint32_t value)
 void init_accel()
 {
 #if defined(PRINTF_debug) && PRINTF_debug
-    PRINTF("Start initialization sequence...\r\n");
+    //PRINTF("Start initialization sequence...\r\n");
 #endif
 
     /* Set accelerometer to inactive mode */
@@ -287,7 +287,7 @@ void init_state(StateMachine *machine)
 void acquire_state(StateMachine *machine)
 {
 #if defined(PRINTF_debug) && PRINTF_debug
-    PRINTF("Acquire state\r\n");
+    //PRINTF("Acquire state\r\n");
 #endif
     /* Acquire raw data from accelerometer */
     acquire_data();
@@ -303,12 +303,10 @@ void acquire_state(StateMachine *machine)
     machine->current_state = SAVE; // Move to save state
 }
 
-
-int stop=0;
 void save_state(StateMachine *machine)
 {
 #if defined(PRINTF_debug) && PRINTF_debug
-    PRINTF("Save state\r\n");
+    //PRINTF("Save state\r\n");
 #endif
     /* Check if the maximum number of records (LIST_SIZE) is reached */
     if (data_to_send.X_accel.used >= LIST_SIZE)
@@ -317,29 +315,33 @@ void save_state(StateMachine *machine)
         GPIO_PortClear(BOARD_LED_GPIO, 1 << BOARD_GREEN_GPIO_PIN); // Turn off green LED
         machine->current_state = SEND;                             // Move to send state
         PRINTF("Too long sequence");
-        
     }
     else
     {
         /* Check if the button is pressed to end the acquisition */
         button_state = GPIO_PinRead(BOARD_BUTTON_GPIO, BOARD_BUTTON_PIN);
         if (button_state) // Button pressed
-        {   
-
-
-            stop=data_to_send.X_accel.used;// ajouter un argument pour fixer la taille de la list
+        {
             do
             {
                 button_state = GPIO_PinRead(BOARD_BUTTON_GPIO, BOARD_BUTTON_PIN);
             } while (button_state); // Wait until the button is released
+
+#if defined(INFERENCE_MODE) && INFERENCE_MODE
+            /* In inference mode, go to inference state */
+            GPIO_PortSet(BOARD_LED_GPIO, 1 << BOARD_RED_GPIO_PIN);     // Turn on red LED
+            GPIO_PortClear(BOARD_LED_GPIO, 1 << BOARD_GREEN_GPIO_PIN); // Turn off green LED
+            machine->current_state = INFER;
+#else
             machine->current_state = SEND; // Otherwise, go to send state
+#endif
         }
         else
         {
             /* Read INT1 pin to check if more data is available */
             INT1_state = GPIO_PinRead(BOARD_INT1_GPIO, BOARD_INT1_PIN);
 #if defined(PRINTF_debug) && PRINTF_debug
-            PRINTF("INT1 state: %d\r\n", INT1_state);
+            //PRINTF("INT1 state: %d\r\n", INT1_state);
 #endif
             if (!INT1_state)                   // If INT1 pin is low (data ready)
                 machine->current_state = SAVE; // Stay in save state
@@ -355,10 +357,11 @@ void save_state(StateMachine *machine)
     }
 }
 
+
 void send_state(StateMachine *machine)
 {
 #if defined(PRINTF_debug) && PRINTF_debug
-    PRINTF("Send state\r\n");
+    //PRINTF("Send state\r\n");
 #endif
 
     /* Indicate sending with LEDs */
@@ -367,7 +370,7 @@ void send_state(StateMachine *machine)
 
     /* Print the collected data */
     int i;
-    for (i = 0; i < stop; i++)
+    for (i = 0; i < LIST_SIZE; i++)
     {
         PRINTF("x: %d y: %d\n", data_to_send.X_accel.array[i], data_to_send.Y_accel.array[i]);
     }
@@ -376,11 +379,94 @@ void send_state(StateMachine *machine)
     freeList(&data_to_send.X_accel);
     freeList(&data_to_send.Y_accel);
 
-//#if defined(PRINTF_debug) && PRINTF_debug
+#if defined(PRINTF_debug) && PRINTF_debug
     PRINTF("End\r\n");
-//#endif
+#endif
     machine->current_state = INIT; // Reset the state machine to the initialization state
 }
+
+void inference_mode(StateMachine *machine)
+{
+    switch (machine->current_state)
+    {
+    case INIT:
+        init_state(machine);
+        break;
+    case ACQUIRE:
+        acquire_state(machine);
+        break;
+    case SAVE:
+        save_state(machine);
+        break;
+    case INFER:
+        infer_state(machine); 
+        break;
+    default:
+        init_state(machine);
+        break;
+    }
+}
+
+#if defined(INFERENCE_MODE) && INFERENCE_MODE
+void infer_state(StateMachine *machine)
+{
+#if defined(PRINTF_debug) && PRINTF_debug
+    //PRINTF("Infer state\r\n");
+#endif
+    int size = inputDims.data[2] * inputDims.data[1]; // Get the size of the input tensor
+    int i, k = 0;
+    inputType = kTensorType_INT8; // Set the input type as int8
+    for (i = 0; i < size; i += 2) // Loop through the input data
+    {
+        if (i >= data_to_send.X_accel.used) // If we've used all the data
+        {
+            inputData[i] = MODEL_INPUT_ZERO_POINT; // Fill with zero point values
+            inputData[i + 1] = MODEL_INPUT_ZERO_POINT;
+        }
+        else // Otherwise, quantize the data to fit the model's input requirements
+        {
+            inputData[i] = (int8_t)(((float)(data_to_send.X_accel.array[k] /** CURRENT_SENS*/)) / MODEL_SCALE_INPUT) + MODEL_INPUT_ZERO_POINT;
+            inputData[i + 1] = (int8_t)(((float)(data_to_send.Y_accel.array[k] /** CURRENT_SENS*/)) / MODEL_SCALE_INPUT) + MODEL_INPUT_ZERO_POINT;
+            k++;
+        }
+    }
+
+#if defined(PRINTF_debug) && PRINTF_debug
+    /* Print input data for debugging */
+    PRINTF("Input value:\n");
+    for (i = 0; i < data_to_send.X_accel.used; i += 2)
+    {
+        PRINTF("i: %d x: %d y: %d\n", i, inputData[i], inputData[i + 1]);
+    }
+    PRINTF("Input Tensor set  \r\n");
+#endif
+
+    /* Run the AI model inference */
+    int startTime = TIMER_GetTimeInUS();
+    MODEL_RunInference();
+    int endTime = TIMER_GetTimeInUS();
+
+#if (1) /*defined(PRINTF_debug) && PRINTF_debug*/
+    /* Print output data for debugging */
+    PRINTF("Output value:\n");
+    for (i = 0; i < outputDims.data[1]; i++)
+    {
+        PRINTF("class: %d prob: %d\n", i, outputData[i]);
+    }
+#endif
+
+    /* Process the model output */
+    MODEL_ProcessOutput(outputData, &outputDims, outputType, endTime - startTime);
+
+    /* Free the lists and reset the state machine */
+    freeList(&data_to_send.X_accel);
+    freeList(&data_to_send.Y_accel);
+#if defined(PRINTF_debug) && PRINTF_debug
+    PRINTF("End\r\n");
+#endif
+    machine->current_state = INIT;
+}
+#endif
 
 void initList(StaticList *sList)
 {

@@ -29,6 +29,7 @@ if(v_USE_NPU) {
     s_microOpResolver.AddReshape();
     s_microOpResolver.AddMean();
     s_microOpResolver.AddFullyConnected();
+    //s_microOpResolver.AddSoftmax();
 }
     return s_microOpResolver;
 }
