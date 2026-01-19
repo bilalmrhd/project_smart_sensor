@@ -258,7 +258,7 @@ void data_acquisition_mode(StateMachine *machine)
 void init_state(StateMachine *machine)
 {
 #if defined(PRINTF_debug) && PRINTF_debug
-    PRINTF("Init state\r\n");
+    //PRINTF("Init state\r\n");
 #endif
     /* Indicate state with LEDs */
     GPIO_PortClear(BOARD_LED_GPIO, 1 << BOARD_GREEN_GPIO_PIN); // Turn off green LED
@@ -418,17 +418,17 @@ void infer_state(StateMachine *machine)
     inputType = kTensorType_INT8; // Set the input type as int8
     for (i = 0; i < size; i += 2) // Loop through the input data
     {
-        if (i >= data_to_send.X_accel.used) // If we've used all the data
-        {
-            inputData[i] = MODEL_INPUT_ZERO_POINT; // Fill with zero point values
-            inputData[i + 1] = MODEL_INPUT_ZERO_POINT;
-        }
-        else // Otherwise, quantize the data to fit the model's input requirements
-        {
+        // if (i >= data_to_send.X_accel.used) // If we've used all the data
+        // {
+        //     inputData[i] = MODEL_INPUT_ZERO_POINT; // Fill with zero point values
+        //     inputData[i + 1] = MODEL_INPUT_ZERO_POINT;
+        // }
+        // else // Otherwise, quantize the data to fit the model's input requirements
+        // {
             inputData[i] = (int8_t)(((float)(data_to_send.X_accel.array[k] /** CURRENT_SENS*/)) / MODEL_SCALE_INPUT) + MODEL_INPUT_ZERO_POINT;
             inputData[i + 1] = (int8_t)(((float)(data_to_send.Y_accel.array[k] /** CURRENT_SENS*/)) / MODEL_SCALE_INPUT) + MODEL_INPUT_ZERO_POINT;
             k++;
-        }
+        //}
     }
 
 #if defined(PRINTF_debug) && PRINTF_debug

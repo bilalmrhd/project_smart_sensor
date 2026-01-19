@@ -3,8 +3,8 @@ import os
 import numpy as np
 
 # User settings
-dataset_path = "C://Users//bilaaaaaaal//Documents//ENSEEIHT//S8//projet_smart_sensor//frdmmcxn9474_22_08_2024_fixed//Dataset"  # Path to the folder containing the CSV files
-X_Y_folder_path = "C://Users//bilaaaaaaal//Documents//ENSEEIHT//S8//projet_smart_sensor//frdmmcxn9474_22_08_2024_fixed//data_processed"  # Path to the folder where the processed files will be saved
+dataset_path = "C://Users//bilaaaaaaal//Documents//ENSEEIHT//S8//projet_smart_sensor//data_bilal"  # Path to the folder containing the CSV files
+X_Y_folder_path = "C://Users//bilaaaaaaal//Documents//ENSEEIHT//S8//projet_smart_sensor//frdmmcxn9474_22_08_2024_fixed//data_processed_1"  # Path to the folder where the processed files will be saved
 
 data = pd.DataFrame()  # Initialize an empty DataFrame to store the concatenated data
 i = 0  # Counter to track the series ID for each CSV file

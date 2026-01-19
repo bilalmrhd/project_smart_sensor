@@ -28,10 +28,10 @@ extern "C"
 #define MAX_TENSOR_DIMS 3 // Maximum number of dimensions in the input/output tensors
 
 // These values are related to quantization in the AI model, adjusting the input and output scales
-#define MODEL_SCALE_INPUT  8.960783f//8.662745475f   // Input scaling factor (converts input values to model-specific scale)
-#define MODEL_SCALE_OUTPUT 0.1375229f//0.163708925f   // Output scaling factor (converts output values from model-specific scale)
-#define MODEL_INPUT_ZERO_POINT -15//-20       // Zero-point for input data (used in quantized models)
-#define MODEL_OUTPUT_ZERO_POINT -10//-128       // Zero-point for output data (used in quantized models)
+#define MODEL_SCALE_INPUT  7.827450752f//8.662745475f   // Input scaling factor (converts input values to model-specific scale)
+#define MODEL_SCALE_OUTPUT  0.173922523f//0.163708925f   // Output scaling factor (converts output values from model-specific scale)
+#define MODEL_INPUT_ZERO_POINT 1//-20       // Zero-point for input data (used in quantized models)
+#define MODEL_OUTPUT_ZERO_POINT -3//-128       // Zero-point for output data (used in quantized models)
 
 // Structure to represent the dimensions of the input and output tensors
 typedef struct

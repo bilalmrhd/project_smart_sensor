@@ -11,7 +11,7 @@ custom_model_data_npu:
 custom_model_data_npu_end:
 
 custom_model_data_mcu: 
-    .incbin "model/tflite_quant_model.tflite"
+    .incbin "model/tflite_quant_model_converted.tflite"
     //.incbin "model/tf_model_int8_v12_cropped.tflite"
 custom_model_data_mcu_end:
 
